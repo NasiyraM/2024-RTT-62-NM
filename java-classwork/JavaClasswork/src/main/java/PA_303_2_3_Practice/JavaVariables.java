@@ -1,4 +1,4 @@
-package PA_303_2_3;
+package PA_303_2_3_Practice;
 
 public class JavaVariables {
     final static double SALES_TAX = 0.07;
