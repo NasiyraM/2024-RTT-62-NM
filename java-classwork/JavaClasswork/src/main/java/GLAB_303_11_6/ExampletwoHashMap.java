@@ -1,5 +1,8 @@
 package GLAB_303_11_6;
 
+
+import java.util.HashMap;
+
 public class ExampletwoHashMap {
     public static void main(String[] args) {
         HashMap<String, String> newHashMap = new HashMap<>();
