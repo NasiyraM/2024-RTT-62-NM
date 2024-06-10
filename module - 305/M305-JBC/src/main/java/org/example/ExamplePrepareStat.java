@@ -33,6 +33,27 @@ public class ExamplePrepareStat {
             System.out.println(name + " | " + email);
         }
 
+        // Update the employee's first and last name
+        SelectSQL = "update employees set firstName=? , lastName=? where id=?";
+        mystmt = conn.prepareStatement(SelectSQL);
+        mystmt.setString(1, "Gary");
+        mystmt.setString(2, "Larson");
+        mystmt.setLong  (3, 1002);
+        mystmt.executeUpdate();
+
+
+        // Verify the update
+        String selectSQL = "SELECT firstName, lastName FROM employees WHERE id = ?";
+        mystmt = conn.prepareStatement(selectSQL);
+        mystmt.setInt(1, 1002);
+        result = mystmt.executeQuery();
+
+        while (result.next()) {
+            String firstName = result.getString("firstName");
+            String lastName = result.getString("lastName");
+            System.out.println("Updated Employee: " + firstName + " " + lastName);
+        }
+
         // Close resources
         result.close();
         mystmt.close();
