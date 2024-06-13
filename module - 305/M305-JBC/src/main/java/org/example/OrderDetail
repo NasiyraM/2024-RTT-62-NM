@@ -1,0 +1,28 @@
+package org.example;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "orderdetails")
+public class OrderDetail {
+
+    @EmbeddedId
+    private OrderDetailPK id;
+
+    @ManyToOne
+    @MapsId("orderNumber")
+    @JoinColumn(name = "orderNumber")
+    private Order order;
+
+    @ManyToOne
+    @MapsId("productCode")
+    @JoinColumn(name = "productCode")
+    private Product product;
+
+    private Integer quantityOrdered;
+    private Double priceEach;
+    private Integer orderLineNumber;
+
+    // Getters and Setters
+}
