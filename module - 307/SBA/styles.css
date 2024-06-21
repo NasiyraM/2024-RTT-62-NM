@@ -171,8 +171,8 @@ footer .newsletter form, footer .quick-links a {
     position: absolute;
     top: 0;
     width: 50px;
-    height: 50px;
-    background-image: url('https://via.placeholder.com/50');
+    height: 74px;
+    background-image: url('images/falling-mango-nbg.png');
     background-size: cover;
     animation: fall linear infinite;
 }
@@ -206,127 +206,4 @@ footer .newsletter form, footer .quick-links a {
     animation-delay: 0.7s;
 }
 
-.raining-mango:nth-child(Sure, here is the code with HTML and CSS files separated:
-
-### index.html
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tropical Mango Island Shop</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="logo">🌴 Mango Island</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Cart 🛒</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="banner">
-        <div class="banner-text">
-            <h1>Welcome to Tropical Mango Island!</h1>
-            <p>Get the freshest mangos delivered to your door.</p>
-        </div>
-    </section>
-
-    <main>
-        <section class="featured-mangos">
-            <h2>Our Mango Delights</h2>
-            <div class="carousel">
-                <img src="https://via.placeholder.com/150" alt="Mango 1">
-                <img src="https://via.placeholder.com/150" alt="Mango 2">
-                <img src="https://via.placeholder.com/150" alt="Mango 3">
-            </div>
-        </section>
-
-        <section class="mango-benefits">
-            <h2>Why Mangos?</h2>
-            <div class="content">
-                <img src="https://media.tenor.com/PxjBynGzxT8AAAAM/mango.gif/" alt="Hell Yes Mango">
-                <p>Mangos are not only delicious but also packed with vitamins and antioxidants!</p>
-            </div>
-        </section>
-
-        <section class="shop-categories">
-            <h2>Explore Our Mango World</h2>
-            <div class="categories">
-                <div class="category">Fresh Mangos</div>
-                <div class="category">Mango Snacks</div>
-                <div class="category">Mango Drinks</div>
-                <div class="category">Mango Gifts</div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <h2>What Our Customers Say</h2>
-            <div class="carousel">
-                <div class="testimonial">
-                    <p>"The best mangos I've ever had!" - Jane Doe</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Amazing quality and fast delivery!" - John Smith</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mango-club">
-            <h2>Mango Lovers Unite!</h2>
-            <p>Sign up for exclusive deals and the latest mango news.</p>
-            <form>
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-        </div>
-        <div class="newsletter">
-            <p>Stay Updated! Enter your email to join our mailing list.</p>
-            <form>
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-        <div class="quick-links">
-            <a href="#">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-        </div>
-        <div class="contact-info">
-            <p>Email: info@mangoisland.com</p>
-            <p>Phone: 123-456-7890</p>
-            <p>Address: 123 Tropical Lane, Mango City</p>
-        </div>
-    </footer>
-
-    <div class="animation">
-        <img src="images/mango-time.gif" alt="Mango Time gif">
-    </div>
-
-    <!-- Raining Mangos Effect -->
-    <div class="raining-container">
-        <div class="mango raining-mango"></div>
-        <div class="mango raining-mango"></div>
-        <div class="mango raining-mango"></div>
-        <div class="mango raining-mango"></div>
-        <div class="mango raining-mango"></div>
-        <!-- Add more mango divs as needed -->
-    </div>
-</body>
-</html>
+/* .raining-mango:nth-child */
