@@ -32,11 +32,11 @@ nav ul li a {
 }
 
 .banner {
-    background-image: url('https://via.placeholder.com/1200x400');
+    background-image: url('images/d\'mangoBanner.png');
     background-size: cover;
     text-align: center;
     color: white;
-    padding: 5em 0;
+    padding: 19em 0;
 }
 
 .banner .banner-text h1 {
