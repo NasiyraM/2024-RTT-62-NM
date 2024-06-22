@@ -34,9 +34,11 @@ nav ul li a {
 .banner {
     background-image: url('images/d\'mangoBanner.png');
     background-size: cover;
+    background-position: center;
     text-align: center;
     color: black;
     padding: 19em 0;
+    position: relative;
 }
 
 .banner .banner-text {
@@ -51,6 +53,7 @@ nav ul li a {
 
 main {
     padding: 2em;
+    padding-top: 7em;
 }
 
 section {
