@@ -40,6 +40,16 @@
         .questionnaire {
             max-width: 600px;
             margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2em;
+        }
+        .questionnaire h1 {
+            margin-bottom: 1em;
+        }
+        .questionnaire button {
+            margin-top: 1em;
         }
         .results {
             margin-top: 2em;
@@ -61,10 +71,10 @@
     </header>
 
     <div class="content">
-        <h1 class="text-center">About the Owner</h1>
-        <p class="text-center">Learn more about the owner by completing this fun questionnaire!</p>
-        
         <div class="questionnaire">
+            <h1 class="text-center">About the Owner</h1>
+            <p class="text-center">Learn more about the owner by completing this fun questionnaire!</p>
+            
             <form id="quizForm">
                 <div class="mb-3">
                     <label for="q1" class="form-label">1. What is the owner's favorite fruit?</label>
@@ -106,7 +116,7 @@
                     <label for="q10" class="form-label">10. What is the owner's favorite dish?</label>
                     <input type="text" class="form-control" id="q10" name="q10">
                 </div>
-                <button type="button" class="btn btn-primary" onclick="checkAnswers()">Submit</button>
+                <button type="button" class="btn btn-primary w-100" onclick="checkAnswers()">Submit</button>
             </form>
 
             <div class="results" id="results"></div>
