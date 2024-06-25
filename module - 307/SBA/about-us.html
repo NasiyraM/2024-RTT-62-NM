@@ -54,6 +54,19 @@
         .results {
             margin-top: 2em;
         }
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+        .form-group label {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            display: block;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.5em;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
@@ -76,44 +89,44 @@
             <p class="text-center">Learn more about the owner by completing this fun questionnaire!</p>
             
             <form id="quizForm">
-                <div class="mb-3">
-                    <label for="q1" class="form-label">1. What is the owner's favorite fruit?</label>
+                <div class="form-group">
+                    <label for="q1">1. What is the owner's favorite fruit?</label>
                     <input type="text" class="form-control" id="q1" name="q1">
                 </div>
-                <div class="mb-3">
-                    <label for="q2" class="form-label">2. Where was the owner born?</label>
+                <div class="form-group">
+                    <label for="q2">2. Where was the owner born?</label>
                     <input type="text" class="form-control" id="q2" name="q2">
                 </div>
-                <div class="mb-3">
-                    <label for="q3" class="form-label">3. What is the owner's favorite hobby?</label>
+                <div class="form-group">
+                    <label for="q3">3. What is the owner's favorite hobby?</label>
                     <input type="text" class="form-control" id="q3" name="q3">
                 </div>
-                <div class="mb-3">
-                    <label for="q4" class="form-label">4. How many siblings does the owner have?</label>
+                <div class="form-group">
+                    <label for="q4">4. How many siblings does the owner have?</label>
                     <input type="number" class="form-control" id="q4" name="q4">
                 </div>
-                <div class="mb-3">
-                    <label for="q5" class="form-label">5. What is the owner's favorite color?</label>
+                <div class="form-group">
+                    <label for="q5">5. What is the owner's favorite color?</label>
                     <input type="text" class="form-control" id="q5" name="q5">
                 </div>
-                <div class="mb-3">
-                    <label for="q6" class="form-label">6. What is the owner's favorite movie?</label>
+                <div class="form-group">
+                    <label for="q6">6. What is the owner's favorite movie?</label>
                     <input type="text" class="form-control" id="q6" name="q6">
                 </div>
-                <div class="mb-3">
-                    <label for="q7" class="form-label">7. What is the owner's favorite book?</label>
+                <div class="form-group">
+                    <label for="q7">7. What is the owner's favorite book?</label>
                     <input type="text" class="form-control" id="q7" name="q7">
                 </div>
-                <div class="mb-3">
-                    <label for="q8" class="form-label">8. What is the owner's dream vacation destination?</label>
+                <div class="form-group">
+                    <label for="q8">8. What is the owner's dream vacation destination?</label>
                     <input type="text" class="form-control" id="q8" name="q8">
                 </div>
-                <div class="mb-3">
-                    <label for="q9" class="form-label">9. What is the owner's favorite sport?</label>
+                <div class="form-group">
+                    <label for="q9">9. What is the owner's favorite sport?</label>
                     <input type="text" class="form-control" id="q9" name="q9">
                 </div>
-                <div class="mb-3">
-                    <label for="q10" class="form-label">10. What is the owner's favorite dish?</label>
+                <div class="form-group">
+                    <label for="q10">10. What is the owner's favorite dish?</label>
                     <input type="text" class="form-control" id="q10" name="q10">
                 </div>
                 <button type="button" class="btn btn-primary w-100" onclick="checkAnswers()">Submit</button>
@@ -156,3 +169,4 @@
     </script>
 </body>
 </html>
+
