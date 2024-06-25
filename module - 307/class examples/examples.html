@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1Tag">This is an H1 tag</h1>
+    <div id="divTag">This is a Div tag</div>
+
+
+
+    <script>
+        let element = document.getElementById("h1Tag");
+        console.log(element.innerHTML);
+
+        let divElement = document.getElementById("divTag");
+        divElement.innerHTML = "<b>I am the new div text</b>";
+        console.log(divElement.innerHTML);
+    </script>
+    
+</body>
+</html>
