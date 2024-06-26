@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - D'Mango Island Shop</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,7 +58,6 @@
             margin-bottom: .25em;
             font-size: 2em;
         }
-
         .questionnaire p {
             font-size: 20px;
         }
@@ -75,11 +79,306 @@
             margin-bottom: 0.5em;
             display: block;
         }
+        .required:after {
+            content: " *";
+            color: red;
+        }
         .form-group input {
             width: 100%;
             padding: 0.5em;
             font-size: 1.1em;
         }
+    </style>
+</head>
+
+<!-- <script>
+    // JavaScript for form validation
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            var form = document.getElementById('quizForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                validateForm();
+                if (form.checkValidity()) {
+                    checkAnswers();
+                }
+            }, false);
+        }, false);
+    })();
+
+    function validateForm() {
+        var form = document.getElementById('quizForm');
+        var inputs = form.querySelectorAll('input[required]');
+        inputs.forEach(function (input) {
+            if (input.value.trim() === '') {
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+            } else {
+                input.classList.add('is-valid');
+                input.classList.remove('is-invalid');
+            }
+        });
+    }
+
+    function checkAnswers() {
+        const answers = {
+            q1: "Mango",
+            q2: "Hawaii",
+            q3: "Gardening",
+            q4: "2",
+            q5: "Blue",
+            q6: "The Godfather",
+            q7: "To Kill a Mockingbird",
+            q8: "Bali",
+            q9: "Soccer",
+            q10: "Mango Sticky Rice"
+        };
+
+        let score = 0;
+        let totalQuestions = Object.keys(answers).length;
+        let resultsHtml = "<h3>Results</h3>";
+        Object.keys(answers).forEach(key => {
+    const userAnswer = document.getElementById(key).value.trim();
+    if (userAnswer.toLowerCase() === answers[key].toLowerCase()) {
+        score++;
+    }
+    resultsHtml += `<p>Question ${key[1]}: You answered "${userAnswer}". Correct answer is "${answers[key]}".</p>`;
+});
+
+resultsHtml += `<p>You answered ${score} out of ${totalQuestions} questions correctly.</p>`;
+document.getElementById("results").innerHTML = resultsHtml;
+}
+</script> -->
+
+<body>
+    <header class="header">
+        <div class="logo">🌴 D'Mango Island</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart 🛒</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="questionnaire">
+            <h1 class="text-center">About the Owner</h1>
+            <p class="text-center">Learn more about the owner by completing this fun questionnaire!</p>
+            
+            <form id="quizForm" class="row g-3 needs-validation" novalidate>
+                <div class="col-md-12 form-group">
+                    <label for="q1" class="form-label required">1. What is the owner's favorite fruit?</label>
+                    <input type="text" class="form-control" id="q1" name="q1" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="q2" class="form-label required">2. Where was the owner born?</label>
+                    <input type="text" class="form-control" id="q2" name="q2" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="q3" class="form-label required">3. What is the owner's favorite hobby?</label>
+                    <input type="text" class="form-control" id="q3" name="q3" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="q4" class="form-label required">4. How many siblings does the owner have?</label>
+                    <input type="number" class="form-control" id="q4" name="q4" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="q5" class="form-label required">5. What is the owner's favorite color?</label>
+                    <input type="text" class="form-control" id="q5" name="q5" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="q6" class="form-label required">6. What is the owner's favorite movie?</label>
+                    <input type="text" class="form-control" id="q6" name="q6" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="q7" class="form-label required">7. What is the owner's favorite book?</label>
+                    <input type="text" class="form-control" id="q7" name="q7" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="q8" class="form-label required">8. What is the owner's dream vacation destination?</label>
+                    <input type="text" class="form-control" id="q8" name="q8" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="q9" class="form-label required">9. What is the owner's favorite sport?</label>
+                    <input type="text" class="form-control" id="q9" name="q9" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="q10" class="form-label required">10. What is the owner's favorite dish?</label>
+                    <input type="text" class="form-control" id="q10" name="q10" required>
+                    <div class="invalid-feedback">Please answer this question.</div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </div>
+            </form>
+
+            <div class="results" id="results"></div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for form validation
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var form = document.getElementById('quizForm');
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    validateForm();
+                    if (form.checkValidity()) {
+                        checkAnswers();
+                    }
+                }, false);
+            }, false);
+        })();
+    
+        function validateForm() {
+            var form = document.getElementById('quizForm');
+            var inputs = form.querySelectorAll('input[required]');
+            inputs.forEach(function (input) {
+                if (input.value.trim() === '') {
+                    input.classList.add('is-invalid');
+                    input.classList.remove('is-valid');
+                } else {
+                    input.classList.add('is-valid');
+                    input.classList.remove('is-invalid');
+                }
+            });
+        }
+    
+        function checkAnswers() {
+            const answers = {
+                q1: "Mango",
+                q2: "Hawaii",
+                q3: "Gardening",
+                q4: "2",
+                q5: "Blue",
+                q6: "The Godfather",
+                q7: "To Kill a Mockingbird",
+                q8: "Bali",
+                q9: "Soccer",
+                q10: "Mango Sticky Rice"
+            };
+    
+            let score = 0;
+            let totalQuestions = Object.keys(answers).length;
+            let resultsHtml = "<h3>Results</h3>";
+            Object.keys(answers).forEach(key => {
+        const userAnswer = document.getElementById(key).value.trim();
+        if (userAnswer.toLowerCase() === answers[key].toLowerCase()) {
+            score++;
+        }
+        resultsHtml += `<p>Question ${key[1]}: You answered "${userAnswer}". Correct answer is "${answers[key]}".</p>`;
+    });
+    
+    resultsHtml += `<p>You answered ${score} out of ${totalQuestions} questions correctly.</p>`;
+    document.getElementById("results").innerHTML = resultsHtml;
+    }
+    </script>
+
+</body>
+</html>
+
+
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff3e0;
+            background-image: url('images/falling-mango-nbg.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ff7043;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .header .logo {
+            font-size: 1.5em;
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            padding: 2em;
+        }
+        .questionnaire {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2em;
+            text-align: center;
+        }
+        .questionnaire h1 {
+            margin-bottom: .25em;
+            font-size: 2em;
+        }
+        .questionnaire p {
+            font-size: 20px;
+        }
+        .questionnaire button {
+            margin-top: 1em;
+            background-color: #ff7043;
+            border-color: #ff7043;
+            font-size: x-large;
+        }
+        .results {
+            margin-top: 2em;
+        }
+        .form-group {
+            margin-bottom: 1.5em;
+            text-align: left;
+        }
+        .form-group label {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            display: block;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.5em;
+            font-size: 1.1em;
+        }
+        .is-valid {
+     border-color: #28a745!important;
+}
+
+.is-invalid {
+    border-color: #dc3545!important;
+}
     </style>
 </head>
 <body>
@@ -101,48 +400,48 @@
             <h1 class="text-center">About the Owner</h1>
             <p class="text-center">Learn more about the owner by completing this fun questionnaire!</p>
             
-            <form id="quizForm">
+            <form id="quizForm" class="needs-validation" novalidate>
                 <div class="form-group">
-                    <label for="q1">1. What is the owner's favorite fruit?</label>
-                    <input type="text" class="form-control" id="q1" name="q1">
+                    <label for="q1" class="required">1. What is the owner's favorite fruit?</label>
+                    <input type="text" class="form-control" id="q1" name="q1" required>
                 </div>
                 <div class="form-group">
-                    <label for="q2">2. Where was the owner born?</label>
-                    <input type="text" class="form-control" id="q2" name="q2">
+                    <label for="q2" class="required">2. Where was the owner born?</label>
+                    <input type="text" class="form-control" id="q2" name="q2" required>
                 </div>
                 <div class="form-group">
-                    <label for="q3">3. What is the owner's favorite hobby?</label>
-                    <input type="text" class="form-control" id="q3" name="q3">
+                    <label for="q3" class="required">3. What is the owner's favorite hobby?</label>
+                    <input type="text" class="form-control" id="q3" name="q3" required>
                 </div>
                 <div class="form-group">
-                    <label for="q4">4. How many siblings does the owner have?</label>
-                    <input type="number" class="form-control" id="q4" name="q4">
+                    <label for="q4" class="required">4. How many siblings does the owner have?</label>
+                    <input type="number" class="form-control" id="q4" name="q4" required>
                 </div>
                 <div class="form-group">
-                    <label for="q5">5. What is the owner's favorite color?</label>
-                    <input type="text" class="form-control" id="q5" name="q5">
+                    <label for="q5" class="required">5. What is the owner's favorite color?</label>
+                    <input type="text" class="form-control" id="q5" name="q5" required>
                 </div>
                 <div class="form-group">
-                    <label for="q6">6. What is the owner's favorite movie?</label>
-                    <input type="text" class="form-control" id="q6" name="q6">
+                    <label for="q6" class="required">6. What is the owner's favorite movie?</label>
+                    <input type="text" class="form-control" id="q6" name="q6" required>
                 </div>
                 <div class="form-group">
-                    <label for="q7">7. What is the owner's favorite book?</label>
-                    <input type="text" class="form-control" id="q7" name="q7">
+                    <label for="q7" class="required">7. What is the owner's favorite book?</label>
+                    <input type="text" class="form-control" id="q7" name="q7" required>
                 </div>
                 <div class="form-group">
-                    <label for="q8">8. What is the owner's dream vacation destination?</label>
-                    <input type="text" class="form-control" id="q8" name="q8">
+                    <label for="q8" class="required">8. What is the owner's dream vacation destination?</label>
+                    <input type="text" class="form-control" id="q8" name="q8" required>
                 </div>
                 <div class="form-group">
-                    <label for="q9">9. What is the owner's favorite sport?</label>
-                    <input type="text" class="form-control" id="q9" name="q9">
+                    <label for="q9" class="required">9. What is the owner's favorite sport?</label>
+                    <input type="text" class="form-control" id="q9" name="q9" required>
                 </div>
                 <div class="form-group">
-                    <label for="q10">10. What is the owner's favorite dish?</label>
-                    <input type="text" class="form-control" id="q10" name="q10">
+                    <label for="q10" class="required">10. What is the owner's favorite dish?</label>
+                    <input type="text" class="form-control" id="q10" name="q10" required>
                 </div>
-                <button type="button" class="btn btn-primary w-100" onclick="checkAnswers()">Submit</button>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
             </form>
 
             <div class="results" id="results"></div>
@@ -150,6 +449,28 @@
     </div>
 
     <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        } else {
+                            event.preventDefault(); // Prevent default submission to handle it via JavaScript
+                            checkAnswers();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+
         function checkAnswers() {
             const answers = {
                 q1: "Mango",
@@ -180,5 +501,9 @@
             document.getElementById("results").innerHTML = resultsHtml;
         }
     </script>
+
+    
+    
 </body>
 </html>
+ -->
