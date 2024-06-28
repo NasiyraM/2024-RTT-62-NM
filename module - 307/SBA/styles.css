@@ -229,3 +229,21 @@ footer .newsletter form, footer .quick-links a {
     animation-duration: 2.5s;
     animation-delay: 0.7s
 }
+
+/* Subcription form validation styles for invalid and valid inputs */
+input.is-invalid {
+    border-color: #dc3545;
+}
+
+input.is-valid {
+    border-color: #28a745;
+}
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+}
+
+input.is-invalid + .invalid-feedback {
+    display: block;
+}
