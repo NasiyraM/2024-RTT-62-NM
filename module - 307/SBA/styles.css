@@ -251,3 +251,55 @@ input.is-invalid + .invalid-feedback {
 input[required] {
     border: 2px solid greenyellow;
 }
+
+
+/* General styling for activities page */
+.activities-page {
+    padding: 2em;
+    display: flex;
+}
+
+/* Style for each activity section */
+.activities-page section {
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.activities-page h2 {
+    color: #ff7043;
+    margin-bottom: 1em;
+}
+
+.activities-page p {
+    font-size: 1.1em;
+}
+
+/* Image styling for activities */
+.activities-page .activity-image {
+    width: 300px !important; 
+    height: 200px !important; 
+    object-fit: cover; /* Ensures images cover the dimensions without distortion */
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+/* Dropdown menu styling */
+.navbar .dropdown-menu {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .dropdown-item {
+    color: #333;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #ff7043;
+    color: #fff;
+}
+
