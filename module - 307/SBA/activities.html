@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - D'Mango Island Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🌴 D'Mango Island</div>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Activities
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#mangoCooking">Mango Cooking</a></li>
+                        <li><a class="dropdown-item" href="#mangoGames">Mango Games</a></li>
+                        <li><a class="dropdown-item" href="#mangoCrafts">Mango Crafts</a></li>
+                        <li><a class="dropdown-item" href="#mangoSurfing">Mango Surfing</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="mangoCooking">
+            <h2>Mango Cooking</h2>
+            <img src="images/mango-cooking.jpg" alt="Mango Cooking" class="img-fluid">
+            <p>Join us for some delicious mango cooking classes. Learn how to make mango salsa, mango smoothies, and more!</p>
+        </section>
+
+        <section id="mangoGames">
+            <h2>Mango Games</h2>
+            <img src="images/mango-games.jpg" alt="Mango Games" class="img-fluid">
+            <p>Have fun with our exciting mango-themed games. Participate in mango-eating contests, mango treasure hunts, and more!</p>
+        </section>
+
+        <section id="mangoCrafts">
+            <h2>Mango Crafts</h2>
+            <img src="images/mango-crafts.jpg" alt="Mango Crafts" class="img-fluid">
+            <p>Get creative with our mango crafts sessions. Make mango-inspired art, decorate mango-shaped cookies, and more!</p>
+        </section>
+
+        <section id="mangoSurfing">
+            <h2>Mango Surfing</h2>
+            <img src="images/mango-surfing.jpg" alt="Mango Surfing" class="img-fluid">
+            <p>Experience the thrill of mango surfing. Ride the waves and enjoy the tropical breeze with our expert instructors!</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="newsletter">
+            <p>Stay Updated! Enter your email to join our mailing list.</p>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+                <button type="submit">Subscribe</button>
+            </form>
+            
+        </div>
+        <div class="contact-info">
+            <p>Email: info@mangoisland.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 Tropical Lane, Mango City Near You</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
