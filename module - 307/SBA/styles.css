@@ -247,3 +247,7 @@ input.is-valid {
 input.is-invalid + .invalid-feedback {
     display: block;
 }
+/* Attribute selector to target required inputs */
+input[required] {
+    border: 2px solid greenyellow;
+}
