@@ -173,7 +173,7 @@
 
             <div class="table-responsive">
                 <table class="table table-bordered">
-                    <thead>
+                    <thead id="resultsTableHead" class="d-none">
                         <tr>
                             <th scope="col">Question</th>
                             <th scope="col">Your Answer</th>
@@ -218,18 +218,18 @@
         }
     
         function checkAnswers() {
-            const answers = {
-                q1: "Mango",
-                q2: "Hawaii",
-                q3: "Gardening",
-                q4: "2",
-                q5: "Blue",
-                q6: "The Godfather",
-                q7: "To Kill a Mockingbird",
-                q8: "Bali",
-                q9: "Soccer",
-                q10: "Mango Sticky Rice"
-        };
+    const answers = {
+        q1: "Mango",
+        q2: "Hawaii",
+        q3: "Gardening",
+        q4: "2",
+        q5: "Blue",
+        q6: "The Godfather",
+        q7: "To Kill a Mockingbird",
+        q8: "Bali",
+        q9: "Soccer",
+        q10: "Mango Sticky Rice"
+    };
 
     let score = 0;
     let totalQuestions = Object.keys(answers).length;
@@ -255,7 +255,9 @@
         </tr>
     `;
     document.getElementById("resultsTable").innerHTML = resultsHtml;
+    document.getElementById("resultsTableHead").classList.remove("d-none");
 }
+
 
     //     function checkAnswers() {
     //         const answers = {
