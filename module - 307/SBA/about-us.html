@@ -91,6 +91,9 @@
             padding: 0.5em;
             font-size: 1.1em;
         }
+        .table-responsive {
+            margin-top: 2em;
+        }
     </style>
 </head>
 <body>
@@ -168,7 +171,19 @@
                 </div>
             </form>
 
-            <div class="results" id="results"></div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Question</th>
+                            <th scope="col">Your Answer</th>
+                            <th scope="col">Correct Answer</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTable">
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -214,22 +229,62 @@
                 q8: "Bali",
                 q9: "Soccer",
                 q10: "Mango Sticky Rice"
-            };
-    
-            let score = 0;
-            let totalQuestions = Object.keys(answers).length;
-            let resultsHtml = "<h3>Results</h3>";
-            Object.keys(answers).forEach(key => {
+        };
+
+    let score = 0;
+    let totalQuestions = Object.keys(answers).length;
+    let resultsHtml = "";
+
+    Object.keys(answers).forEach(key => {
         const userAnswer = document.getElementById(key).value.trim();
         if (userAnswer.toLowerCase() === answers[key].toLowerCase()) {
             score++;
         }
-        resultsHtml += `<p>Question ${key[1]}: You answered "${userAnswer}". Correct answer is "${answers[key]}".</p>`;
+        resultsHtml += `
+            <tr>
+                <td>Question ${key[1]}</td>
+                <td>${userAnswer}</td>
+                <td>${answers[key]}</td>
+            </tr>
+        `;
     });
+
+    resultsHtml += `
+        <tr>
+            <td colspan="3">You answered ${score} out of ${totalQuestions} questions correctly.</td>
+        </tr>
+    `;
+    document.getElementById("resultsTable").innerHTML = resultsHtml;
+}
+
+    //     function checkAnswers() {
+    //         const answers = {
+    //             q1: "Mango",
+    //             q2: "Hawaii",
+    //             q3: "Gardening",
+    //             q4: "2",
+    //             q5: "Blue",
+    //             q6: "The Godfather",
+    //             q7: "To Kill a Mockingbird",
+    //             q8: "Bali",
+    //             q9: "Soccer",
+    //             q10: "Mango Sticky Rice"
+    //         };
     
-    resultsHtml += `<p>You answered ${score} out of ${totalQuestions} questions correctly.</p>`;
-    document.getElementById("results").innerHTML = resultsHtml;
-    }
+    //         let score = 0;
+    //         let totalQuestions = Object.keys(answers).length;
+    //         let resultsHtml = "<h3>Results</h3>";
+    //         Object.keys(answers).forEach(key => {
+    //     const userAnswer = document.getElementById(key).value.trim();
+    //     if (userAnswer.toLowerCase() === answers[key].toLowerCase()) {
+    //         score++;
+    //     }
+    //     resultsHtml += `<p>Question ${key[1]}: You answered "${userAnswer}". Correct answer is "${answers[key]}".</p>`;
+    // });
+    
+    // resultsHtml += `<p>You answered ${score} out of ${totalQuestions} questions correctly.</p>`;
+    // document.getElementById("results").innerHTML = resultsHtml;
+    // }
     </script>
 
 </body>
