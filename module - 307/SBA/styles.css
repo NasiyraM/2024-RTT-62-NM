@@ -252,11 +252,10 @@ input[required] {
     border: 2px solid greenyellow;
 }
 
-
+/* ACTIVITIES PAGE STYLES */
 /* General styling for activities page */
 .activities-page {
     padding: 2em;
-    display: flex;
 }
 
 /* Style for each activity section */
@@ -269,22 +268,35 @@ input[required] {
     text-align: center;
 }
 
+/* Heading styles */
 .activities-page h2 {
     color: #ff7043;
     margin-bottom: 1em;
 }
 
+/* Paragraph styles */
 .activities-page p {
     font-size: 1.1em;
 }
 
+/* Image container styling for activities */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px; /* Fixed height */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Max width for the images */
+    margin: 0 auto 1em; /* Center and add bottom margin */
+}
+
 /* Image styling for activities */
 .activities-page .activity-image {
-    width: 300px !important; 
-    height: 200px !important; 
+    width: 100%;
+    height: 100%;
     object-fit: cover; /* Ensures images cover the dimensions without distortion */
-    margin-bottom: 1em;
-    border-radius: 10px;
 }
 
 /* Dropdown menu styling */
