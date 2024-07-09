@@ -10,6 +10,160 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts links: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+   
+    <style>
+        .activities-page {
+            padding: 2em;
+        }
+        .activities-page h2 {
+            margin-top: 2em;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+        .activity-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+        .highlight {
+            background-color: #ffcc80;
+            padding: 1em;
+            border-radius: 10px;
+        }
+        .highlight h2 {
+            color: #ff7043;
+            font-family: "Playwrite AU QLD", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400px;
+            font-style: normal;
+        }
+        .highlight p {
+            font-weight: bold;
+        }
+
+        /* <uniquifier>: Use a unique and descriptive class name
+        <weight>: Use a value from 100 to 400 */
+
+            .playwrite-au-qld {
+            font-family: "Playwrite AU QLD", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400px;
+            font-style: normal;
+        }
+
+        .nav-c {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🌴 D'Mango Island</div>
+        <nav>
+            <ul class="nav justify-content-center nav-c">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Activities
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#mangoSurfing">Mango Surfing</a></li>
+                        <li><a class="dropdown-item" href="#mangoCooking">Mango Cooking</a></li>
+                        <li><a class="dropdown-item" href="#mangoGames">Mango Games</a></li>
+                        <li><a class="dropdown-item" href="#mangoCrafts">Mango Crafts</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content activities-page">
+        <section id="mangoSurfing" class="highlight">
+            <h2>Mango Surfing</h2>
+            <div class="image-container">
+                <img src="images/mango-surfing2.png" alt="Mango Surfing" class="activity-image">
+            </div>
+            <p>Experience the thrill of mango surfing. Ride the waves and enjoy the tropical breeze with our expert instructors!
+                <br> Only 1 mango per hour to surf!</p>
+        </section>
+
+        <section id="mangoCooking">
+            <h2 class="playwrite-au-qld">Mango Cooking</h2>
+            <div class="image-container">
+                <img src="images/mango-cooking.jpg" alt="Mango Cooking" class="activity-image">
+            </div>
+            <p>Join us for some delicious mango cooking classes. Learn how to make mango salsa, mango smoothies, and more!</p>
+        </section>
+
+        <section id="mangoGames">
+            <h2 class="playwrite-au-qld">Mango Games</h2>
+            <div class="image-container">
+                <img src="images/mango-games.jpg" alt="Mango Games" class="activity-image">
+            </div>
+            <p>Have fun with our exciting mango-themed games. Participate in mango-eating contests, mango treasure hunts, and more! 
+                Manbol: New beach game with ball in the shape of mango is inspired by childhood mango-throwing games in the Amazon, 
+                has become a popular beach sport in D'Mango Tropical Island</p>
+        </section>
+
+        <section id="mangoCrafts">
+            <h2 class="playwrite-au-qld">Mango Crafts</h2>
+            <div class="image-container">
+                <img src="images/mango-gift3.png" alt="Mango Crafts" class="activity-image">
+            </div>
+            <p>Get creative with our mango crafts sessions. Make mango-inspired art, decorate mango-shaped cookies, and more!</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="newsletter">
+            <p>Stay Updated! Enter your email to join our mailing list.</p>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <p>Email: info@mangoisland.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 Tropical Lane, Mango City Near You</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - D'Mango Island Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -96,4 +250,4 @@
 
     <script src="scripts.js"></script>
 </body>
-</html>
+</html> -->
