@@ -252,7 +252,6 @@ input[required] {
     border: 2px solid greenyellow;
 }
 
-/* ACTIVITIES PAGE STYLES */
 /* General styling for activities page */
 .activities-page {
     padding: 2em;
@@ -268,50 +267,45 @@ input[required] {
     text-align: center;
 }
 
-/* Heading styles */
 .activities-page h2 {
     color: #ff7043;
     margin-bottom: 1em;
 }
 
-/* Paragraph styles */
 .activities-page p {
     font-size: 1.1em;
 }
 
-/* Image container styling for activities */
-.image-container {
+/* Image styling for activities */
+.activities-page .activity-image {
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover; 
+    margin-bottom: 1em;
+    border-radius: 10px;
+    
+}
+
+.activities-page .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    border-radius: 10px;
-    height: 300px; /* Fixed height */
-    width: 100%; /* Full width */
-    max-width: 600px; /* Max width for the images */
-    margin: 0 auto 1em; /* Center and add bottom margin */
+    height: 200px; 
 }
 
-/* Image styling for activities */
-.activities-page .activity-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images cover the dimensions without distortion */
+.activities-page .highlight {
+    border: 3px solid #ff7043;
+    background-color: #fff7e6;
 }
 
-/* Dropdown menu styling */
-.navbar .dropdown-menu {
-    background-color: #fff;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.activities-page .cost-highlight {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff7043;
 }
 
-.navbar .dropdown-item {
-    color: #333;
+.activities-page .cost {
+    font-size: 1.5em;
 }
 
-.navbar .dropdown-item:hover {
-    background-color: #ff7043;
-    color: #fff;
-}
 
